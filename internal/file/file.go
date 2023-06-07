@@ -1,9 +1,12 @@
 package file
 
-import "github.com/google/uuid"
+import (
+	"fmt"
+	"github.com/google/uuid"
+)
 
 type File struct {
-	Id   uuid.UUID
+	ID   uuid.UUID
 	Name string
 	Data []byte
 }
@@ -16,8 +19,12 @@ func NewFile(filename string, blob []byte) (*File, error) {
 	}
 
 	return &File{
-		Id:   fileId,
+		ID:   fileId,
 		Name: filename,
 		Data: blob,
 	}, nil
+}
+
+func (f *File) String() string {
+	return fmt.Sprintf("File(%s, %v)", f.Name, f.ID)
 }
