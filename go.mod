@@ -1,4 +1,4 @@
-module github.com/DimonVelikij/storage
+module github.com/DimonVelikij/storage/v2
 
 go 1.20
 

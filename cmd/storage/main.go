@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 )
-import "github.com/DimonVelikij/storage/internal/storage"
+import "github.com/DimonVelikij/storage/v2/internal/storage"
 
 func main() {
 	st := storage.NewStorage()
